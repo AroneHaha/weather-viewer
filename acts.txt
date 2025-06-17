@@ -1,0 +1,92 @@
+KEY POINTS:
+[a] System must save/show the records.
+[b] The system should be designed and viewed from the perspective of an Admin, Staff, or Employee.
+[c] CRUD concept must be applied(Create, Read, Update, Delete).
+    CREATE - Adding value, records, etc.
+    READ - Displaying records
+    UPDATE - Changing record's values
+    DELETE - Removing Data
+[d] Key variables are already provided for each system, but adding more 
+features creatively is encouraged to improve functionality and make the 
+system more complete.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[Khurt] CAR RENTAL MANAGEMENT SYSTEM
+>> Key Variables <<
+CarID, Model, Brand, Year, Status(Unavailable / Available / Under Maintenance), BorrowerLastName, BorrowerFirstName, BorrowerMiddleName, 
+BorrowedAt(Time user borrowed), ReturnedAt(Time user returned), BorrowPlan(Borrow Hours), TotalAmount(PHP 325 per hour)  -- IF NAHIRAM NA OR HINDI PA
+
+Additional: If client borrowed for every 24 hours, Php 300 discount must be applied.
+eg. user1 borrowed for 24 hours(Php 7800) = Totalamount will be Php 7500(300 discount)
+    user2 borrowed for 30 hours(Php 9750) = Totalamount will be Php 9450(still 300 discount since it is counted for >= 24 hours)
+    user3 borrowed for 48 hours(Php 15600) = Totalamount will be Php 15000(600 discount since it is 48 hrs(think of it as 2 24 hours))
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[Choi] VOTERS MANAGEMENT SYSTEM
+>> Key Variables <<
+VoterID(8 digits randomly generated), lastName, firstName, middleName, Age, PrecinctID(eg. BLCN-123 || Not Assigned), Status(Registered, Non-voter, Minor)
+
+Additional: There must be an option that shows All Registered, All non-voters, and minors separately.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+[Merylle] FAST FOOD ORDERING SYSTEM -- SIMILIAR TO FAST FOOD KIOSK --
+>> Key Variables <<
+TotalAmount, OrderID(6 digits & randomly generated), OrderNumber(Starts from 100), OrderCount(Counts every meal, drinks, etc. for each order)
+Additional: There must be an Order History that includes the meal, OrderID, OrderNumber, and TotalAmount.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[Dominic] EXAM RESULT MANAGEMENT SYSTEM 
+>> Key Variables <<
+StudentID, ExamID, SubjectID(eg. PROG-ABC1), Subject, TotalScore, TotalItems, TotalGrade, GradePercentage, Status (Passed, Failed, Missing)
+
+Additional: There must be an option that shows all students who passed and those who failed(Different categories so it must be separated)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[Roland] MOVIE TICKET BOOKING SYSTEM
+>> Key Variables <<
+BookingID, MovieName, SeatNumber, Showtime, TheaterID, Price, Status (Reserved, Paid, Cancelled)
+
+Table arrangement using array sample(for clear representation):
+   |  1     2     3     4
+1  |  s1    X     s3    s4
+2  |  s5    s6    s7    s8
+3  |  s9    s10   T   s12
+
+**System must ask for row and col(eg. Enter room: 1, 3 == s4)**
+X = Unavailable
+T = Taken
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[Luckyson] HOTEL RESERVATION MANAGEMENT SYSTEM
+>> Key Variables <<
+BookingID, RoomID, GuestLastName, GuestFirstName, GuestMiddleInitial, GuestContactNumber, BookedDate(Day - MM/DD/YY (eg. Sunday - 06/15/2025)), 
+RoomStatus(Reserved, Available, Under Maintenance), BookedRoom, GuestTimeIn, GuestTimeOut, TotalAmount(PHP 799 per 12 Hours)
+
+Additional: Total Amount must add Php 100 on TotalAmount if weekend(Saturday and Sunday)
+
+Rooms arrangement using array sample(for clear representation):
+A1  TT  |   B1  UN   |  C1  C2
+A3  A4  |   B3  B4   |  TT  C4
+A5  A6  |   B5  B6   |  UN  C6
+TT  TT  |   RR  B8   |  C7  RR
+
+**System must ask for RoomID(eg. Enter room: A1)
+UN = Under Maintenance
+TT = Taken
+RR = Reserved
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+[Ferose] PET ADOPTATION MANAGEMENT SYSTEM
+>> Key Variables <<
+PetID, PetName, Type(Dog/Cat/etc.), Breed, Age, Status (Available, Adopted), isDewormed(boolean || 0 || 1), isRabiesVaccinated(boolean || 0 || 1), 
+AdopterID, AdopterLastName, AdopterFirstName, AdopterMiddleInitial, AdopterAge, AdopterMonthlySalary, Address, ContactNumber.
+
+Additional: If adopter has 5k and below for AdopterMonthlySalary, application must be rejected.
